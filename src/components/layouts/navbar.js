@@ -5,7 +5,14 @@ export default function navbar() {
         <>
             <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="/">Your Code Store</a>
+                    <div className="navbar-item">Your Code Store</div>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="btns">
+                            <a class="button is-primary" href="#"><strong>Add Snippet</strong></a>
+                        </div>
+                    </div>
                 </div>
             </nav>  
         </>
