@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 import SideBar from '../layouts/sidebar';
+import CodeList from './codeList';
+import { StateManager } from '../context/StateManager';
 
 export default function Home() {
     return (
@@ -16,7 +18,9 @@ export default function Home() {
                             </div>
                         </div>
                         <div className='column is-9'>
-                            <div className='box'>Homelayout</div>
+                            <div className='box'>
+                                <CodeList/>
+                            </div>
                         </div>
                     </div>
                 </div>

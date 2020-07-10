@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Home from './components/pages/home';
-
+import { StateManager } from './components/context/StateManager';
 
 function App() {
   return (
-    <div className="App">
+    <StateManager>
       <Home/>
-    </div>
+    </StateManager>
   );
 }
 
