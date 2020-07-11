@@ -4,11 +4,11 @@ import { GlobalContext } from '../context/StateManager';
 
 
 
-export default function codeList() {
+export default function CodeList() {
 
-    // const context = useContext(GlobalContext);
+    const context = useContext(GlobalContext);
 
-    // console.log(context);
+    console.log(context);
     
     return (
         <>
