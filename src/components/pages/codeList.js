@@ -6,13 +6,13 @@ import { GlobalContext } from '../context/StateManager';
 
 export default function CodeList() {
 
-    const context = useContext(GlobalContext);
-
-    console.log(context);
+    const { codes } = useContext(GlobalContext);
     
     return (
         <>
-          <Code/> 
+          { codes.map(code => (
+            <Code desc={code.desc} type={code.type} id={code.id}/>
+          ))} 
         </>
     )
 }

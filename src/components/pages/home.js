@@ -18,9 +18,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className='column is-9'>
-                            <div className='box'>
                                 <CodeList/>
-                            </div>
                         </div>
                     </div>
                 </div>

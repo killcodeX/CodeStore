@@ -1,10 +1,16 @@
 import React from 'react';
 
 
-export default function Code() {
+export default function Code(props) {
+
+  const {desc, type, id } = props;
     return (
         <>
-          hi code here !!  
+          <div className='box'>
+            <h2 className='is-size-4'>{desc}</h2>
+            <div className='has-text-right'>Type: {type}</div>
+            <div className='button btn'>Know More</div>
+          </div>
         </>
     )
 }
