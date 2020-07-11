@@ -4,7 +4,7 @@ import {
   } from "react-router-dom";
   
 
-export default function Navbar() {
+export default function Navbar1() {
     return (
         <>
             <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="btns">
-                            <Link class="button is-primary" to="/addcode"><strong>Add Snippet</strong></Link>
+                            <Link class="button is-primary" to="/"><strong>Go Home</strong></Link>
                         </div>
                     </div>
                 </div>
