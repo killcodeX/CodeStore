@@ -12,15 +12,14 @@ export default function AddCode() {
 
     const submit = (e) => {
         e.preventDefault();
-        // const newCode = {
-        //     id : Math.floor(Math.random() * 100000),
-        //     desc,
-        //     codearea,
-        //     type
-        // }
+        const newCode = {
+            id : Math.floor(Math.random() * 100000),
+            desc,
+            codearea,
+            type
+        }
 
-        // addCode(newCode);
-        console.log(desc,codearea,type)
+        addCode(newCode);
 
         setDesc('');
         setCodearea('');

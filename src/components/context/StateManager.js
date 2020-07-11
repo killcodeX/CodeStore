@@ -18,38 +18,7 @@ const initialState = {
           },
           {
             "desc": "Lemon", "type": "c#", "id": 5
-          },
-          {
-            "desc": "Banana", "type": "css", "id": 6
-          },
-          {
-            "desc": "Pineapple", "type": "python", "id": 7
-          },
-          {
-            "desc": "Mango", "type": "javascript","id": 8
-          },
-          { 
-            "desc": "Red", "type": "java", "id": 9 
-          },
-          {
-            "desc": "Green", "type": "c#", "id": 10
-          },
-          {
-            "desc": "Pear", "type": "css", "id": 11
-          },
-          {
-            "desc": "Peach", "type": "javascript", "id": 12
-          },
-          {
-            "desc": "Cherries", "type": "python", "id": 13
-          },
-          {
-            "desc": "Strawberry", "type": "java", "id": 14
-          },
-          {
-            "desc": "Kiwi", "type": "c#", "id": 15
-          },
-          
+          } 
     ]
 }  
 
@@ -64,15 +33,15 @@ export const StateManager = ({ children }) => {
     // Actions 
     function deleteCode(id){
         dispatch({
-            type: 'DELETE_TRANSACTION',
+            type: 'DELETE_CODE',
             payload: id
         });
     }
 
-    function addCode(transaction){
+    function addCode(code){
         dispatch({
-            type: 'ADD_TRANSACTION',
-            payload: transaction
+            type: 'ADD_CODE',
+            payload: code
         });
     }
 
