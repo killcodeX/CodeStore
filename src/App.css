@@ -37,7 +37,26 @@
   padding-top: 20px;
 }
 
-/* ----------------------------------------- Footer ------------------------------------------------ */
+/* ----------------------------------------- AddCode ----------------------------------------- */
+
+/* .code-message{
+  height:100px;
+} */
+
+.sub-btn{
+  position: relative;
+  left:25%;
+  width:500px;
+  transition: transform 0.3s ease;
+  box-shadow: 4.5px 4.5px 8px 1px rgba(39,108,218,0.52);
+}
+
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* ----------------------------------------- Footer ------------------------------------------ */
 
 footer{
   margin-top: -54px;

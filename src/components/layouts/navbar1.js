@@ -11,10 +11,10 @@ export default function Navbar1() {
                 <div className="navbar-brand">
                     <div className="navbar-item">Your Code Store</div>
                 </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="btns">
-                            <Link class="button is-primary" to="/"><strong>Go Home</strong></Link>
+                <div className="navbar-end">
+                    <div className="navbar-item">
+                        <div className="btns">
+                            <Link className="button is-primary" to="/"><strong>Go Home</strong></Link>
                         </div>
                     </div>
                 </div>
