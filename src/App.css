@@ -64,6 +64,51 @@
   padding-top: 20px;
 }
 
+/* ----------------------------------------- Code login ------------------------------------------ */
+
+#login{
+  background-image: url(./components/images/wave.png);
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-color: #fff;
+  position: relative;
+
+}
+
+.vector-bg{
+  position: absolute;
+  top:100px;
+  width:450px;
+ 
+}
+
+.avatar-bg{
+  position: absolute;
+  width:150px;
+  top:50px;
+  right:130px;
+}
+
+.login-form{
+  padding-top: 200px;
+  padding-left: 170px;
+  width:550px;
+}
+.login-form form{
+  padding-top: 20px;
+}
+
+.login-form button{
+  margin-top: 20px ;
+  width:380px;
+  border-radius: 20px;
+  background-color: #2DCF95;
+  color: white;
+}
+.login-form button:hover{
+  color: white;
+}
+
 /* ----------------------------------------- Footer ------------------------------------------ */
 
 footer{
