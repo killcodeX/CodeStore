@@ -5,19 +5,19 @@ import AppReducer from './AppReducer';
 const initialState = {
     codes : [
         {
-            "desc": "Grapes", "type": "css", "id": 1
+            "desc": "Grapes", "type": "css", "id": 1, "codearea": 'grapeCode'
           },
           {
-            "desc": "Melon", "type": "javascript", "id": 2
+            "desc": "Melon", "type": "javascript", "id": 2, "codearea": 'melonCode'
           },
           {
-            "desc": "Watermelon", "type": "python", "id": 3
+            "desc": "Watermelon", "type": "python", "id": 3, "codearea": 'watermaelonCode'
           },
           {
-            "desc": "Tangerine", "type": "java", "id": 4
+            "desc": "Tangerine", "type": "java", "id": 4, "codearea": 'tangerineCode'
           },
           {
-            "desc": "Lemon", "type": "c#", "id": 5
+            "desc": "Lemon", "type": "c#", "id": 5, "codearea": 'lemonCode'
           } 
     ]
 }  
