@@ -45,11 +45,19 @@ export const StateManager = ({ children }) => {
         });
     }
 
+    function updateCode(code){
+        dispatch({
+            type: 'UPDATE_CODE',
+            payload: code
+        });
+    }
+
     return(
         <GlobalContext.Provider value={{ 
             codes : state.codes,
             deleteCode,
-            addCode
+            addCode,
+            updateCode
         }}>
             { children }
         </GlobalContext.Provider>

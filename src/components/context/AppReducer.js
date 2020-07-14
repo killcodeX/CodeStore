@@ -11,6 +11,11 @@ export default (state, action) => {
                 ...state,
                 codes : [action.payload, ...state.codes]
             }
+        case 'UPDATE_CODE':
+            return {
+                ...state,
+                codes : [action.payload, ...state.codes]
+            }
         default:
             return state
     }

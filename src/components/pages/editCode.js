@@ -1,38 +1,44 @@
-import React, { useState, useContext } from 'react';
-import Navbar1 from '../layouts/navbar1';
+import React, { useState, useContext,useEffect } from 'react';
 import { GlobalContext } from '../context/StateManager';
+import { useParams } from "react-router-dom";
 
-export default function AddCode({history}) {
+export default function EditCode(props) {
 
-    const { addCode } = useContext(GlobalContext);
+    const { id } = useParams();
+
+    const { updateCode,codes } = useContext(GlobalContext);
 
     const [desc, setDesc ] = useState('');
     const [codearea, setCodearea ] = useState('');
     const [type, setType ] = useState('');
 
+    const [newcode, setNewcode] = useState(codes);
+
     const submit = (e) => {
         e.preventDefault();
-        const newCode = {
-            id : Math.floor(Math.random() * 100000),
+        const newCd = {
+            id,
             desc,
             codearea,
             type
         }
 
-        addCode(newCode);
-
-        setDesc('');
-        setCodearea('');
-        history.push('/')
+        updateCode(newCd)
+        props.history.push(`/code/${id}`)
     }
 
+    useEffect(() => {
+        const code = newcode.find(cod => cod.id == id)
+        setDesc(code.desc)
+        setCodearea(code.codearea)
+        setType(code.type)
+    }, [])
 
     return (
         <>
-            <Navbar1/>
             <div className='section'>
                 <div className='container'>
-                    <h2 className='title is-2 has-text-centered'>Add Your Code</h2>
+                    <h2 className='title is-2 has-text-centered'>Edit Your Code</h2>
                     <div className='box'>
                         <form onSubmit={submit}>
                             <div className='field'>
@@ -50,7 +56,7 @@ export default function AddCode({history}) {
                             <div className='field'>
                                 <label className="label">Code Snippet</label>
                                 <div className="control has-icons-left has-icons-right">
-                                    <textarea className="textarea" type="text" placeholder="Enter Code here...." value={codearea} onChange={e => setCodearea(e.target.value)}/>  
+                                    <textarea className="textarea" type="text" placeholder="Update Code here..." value={codearea} onChange={e => setCodearea(e.target.value)}/>  
                                 </div>
                             </div>
                             <div className="field">
