@@ -10,7 +10,8 @@ export default function CodeDetail({ history }) {
     const { codes, deleteCode } = useContext(GlobalContext);
 
     const [newcode, setNewcode ] = useState(null);
-    // console.log(newcode)
+
+    console.log(id)
     
 
     useEffect(() => {

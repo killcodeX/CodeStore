@@ -10,7 +10,7 @@ export default function Sidebar() {
             <div className="columns is-multiline">
                 <div className="column is-12">
                     <h2 className="subtitle">({codes.length}) Your Codes</h2>
-                    <div className="field has-addons">
+                    {/* <div className="field has-addons">
                         <div className="control">
                             <button className="button is-dark">
                             <i className="fas fa-th-large"></i>
@@ -21,7 +21,7 @@ export default function Sidebar() {
                             <i className="fas fa-grip-horizontal"></i>
                             </button>
                         </div>
-                    </div>
+                    </div> */}
                     <h3 className="subtitle is-6 mb-2">Search Snippets</h3>
                     <input className="input" type="text" placeholder="Search your codes..." />
                 </div>

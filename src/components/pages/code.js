@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function Code(props) {
 
   const {desc, type, id } = props;
+  
     return (
         <>
           <div className='box'>

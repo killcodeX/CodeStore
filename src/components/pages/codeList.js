@@ -10,8 +10,8 @@ export default function CodeList() {
     
     return (
         <>
-          { codes.map(code => (
-            <Code desc={code.desc} type={code.type} id={code.id}/>
+          { codes.map((code,i) => (
+            <Code desc={code.desc} type={code.type} id={code.id} key={i}/>
           ))} 
         </>
     )

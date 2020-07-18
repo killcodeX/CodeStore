@@ -24,6 +24,7 @@ export default function EditCode(props) {
         }
 
         updateCode(newCd)
+
         props.history.push(`/code/${id}`)
     }
 
