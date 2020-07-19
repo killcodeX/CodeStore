@@ -11,9 +11,6 @@ export default function CodeDetail({ history }) {
 
     const [newcode, setNewcode ] = useState(null);
 
-    console.log(id)
-    
-
     useEffect(() => {
         const code = codes.find(cod => cod.id === parseInt(id))
         if (code === undefined){

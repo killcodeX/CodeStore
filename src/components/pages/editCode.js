@@ -6,6 +6,8 @@ export default function EditCode(props) {
 
     const { id } = useParams();
 
+    // console.log(id)
+
     const { updateCode,codes } = useContext(GlobalContext);
 
     const [desc, setDesc ] = useState('');
@@ -29,11 +31,11 @@ export default function EditCode(props) {
     }
 
     useEffect(() => {
-        const code = newcode.find(cod => cod.id == id)
+        const code = newcode.find(cod => cod.id === parseInt(id))
         setDesc(code.desc)
         setCodearea(code.codearea)
         setType(code.type)
-    }, [])
+    }, [id])
 
     return (
         <>

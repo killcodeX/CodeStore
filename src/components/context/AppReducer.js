@@ -12,11 +12,16 @@ export default (state, action) => {
                 codes : [action.payload, ...state.codes]
             }
         case 'UPDATE_CODE':
-
-            console.log(action.payload)
+            const updtCode = state.codes.find(
+                (cod) => cod.id == action.payload.id
+              );
+              console.log('coming from update code', updtCode)
+              updtCode.desc = action.payload.desc;
+              updtCode.type = action.payload.type;
+              updtCode.codearea = action.payload.codearea;
             return {
                 // ...state,
-                // codes : [action.payload, ...state.codes]
+                codes : [...state.codes]
             }
         default:
             return state
