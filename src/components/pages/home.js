@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Navbar from '../layouts/navbar';
 import Footer from '../layouts/footer';
 import SideBar from '../layouts/sidebar';
 import CodeList from './codeList';
+import { GlobalContext } from '../context/StateManager';
 
 
-export default function Home() {
+export default function Home({history}) {
+
+    const { loggedIn } = useContext(GlobalContext)
+
+   
 
     return (
         <>

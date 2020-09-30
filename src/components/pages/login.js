@@ -1,18 +1,37 @@
-import React,{ useState } from 'react';
+import React,{ useState, useContext,useEffect } from 'react';
+import { GlobalContext } from '../context/StateManager';
 import BG from '../images/bg.svg';
 import Avatar from '../images/avatar.svg';
 
-export default function Login() {
+
+export default function Login({ history }) {
 
     const [name, setName ] = useState('');
     const [password, setPassword ] = useState('');
+
+    const {  getUser,loggedIn } = useContext(GlobalContext); 
 
     const submit = e => {
         e.preventDefault();
         console.log('name',name);
         console.log('password',password)
+
+        const params = {
+            username: name,
+            password:password
+        }
+
+        getUser(params)
     }
 
+    useEffect(() => {
+        console.log('logg data', loggedIn)
+        if(!loggedIn){
+            history.push('/login')
+        }else {
+            history.push('/')
+        }
+    }, [loggedIn])
 
     return (
         <>

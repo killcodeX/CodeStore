@@ -1,29 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { GlobalContext } from "../context/StateManager";
 
 export default function Sidebar() {
 
-    const { codes } = useContext(GlobalContext);
+    const [searchCode, setSearchcode ] = useState('');
+    const { codes,findCode } = useContext(GlobalContext);
+
+    const submit = (e) => {
+        e.preventDefault();
+        // findCode(searchCode)
+        setSearchcode('');
+    }
+    
 
     return (
         <>
             <div className="columns is-multiline">
                 <div className="column is-12">
                     <h2 className="subtitle">({codes.length}) Your Codes</h2>
-                    {/* <div className="field has-addons">
-                        <div className="control">
-                            <button className="button is-dark">
-                            <i className="fas fa-th-large"></i>
-                            </button>
-                        </div>
-                        <div className="control">
-                            <button className="button">
-                            <i className="fas fa-grip-horizontal"></i>
-                            </button>
-                        </div>
-                    </div> */}
                     <h3 className="subtitle is-6 mb-2">Search Snippets</h3>
-                    <input className="input" type="text" placeholder="Search your codes..." />
+                    <form onSubmit={submit}>
+                        <input className="input" type="text" placeholder="Search your codes..." value={searchCode} onChange={e => setSearchcode(e.target.value)}/>
+                    </form>
                 </div>
                 <div className="column is-12">
                     <h3 className="subtitle is-6 mb-2">Filter</h3>
